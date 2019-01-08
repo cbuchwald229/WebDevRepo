@@ -1,0 +1,77 @@
+/* This is the css styling to the cocoa website */
+@import url('https://fonts.googleapis.com/css?family=Handlee');
+@font-face {
+    font-family: "cac_champagneregular";
+    src: url('../fonts/cacchampagne_regular_macroman/cac_champagne-webfont.eot');
+    src: url('../fonts/cacchampagne_regular_macroman/cac_champagne-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/cacchampagne_regular_macroman/cac_champagne-webfont.woff2') format('woff2'),
+         url('../fonts/cacchampagne_regular_macroman/cac_champagne-webfont.woff') format('woff'),
+         url('../fonts/cacchampagne_regular_macroman/cac_champagne-webfont.ttf') format('truetype'),
+         url('../fonts/cacchampagne_regular_macroman/cac_champagne-webfont.svg#cac_champagneregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body  {
+  background-color: #996633;
+  font-family: Arial;
+}
+h1  {
+  color:#e6ccb3;
+  background-color:#331a00;
+  text-align: center;
+  word-spacing: 10px;
+  font-family: "Handlee", Helvetica;
+}
+h2  {
+  color:white;
+  font-family: "Handlee", Helvetica;
+}
+p{
+  color:#e6ccb3;
+}
+a.brownbold {
+  font-weight: bold;
+  color:#e6ccb3;
+}
+img {
+  border: 3px solid black;
+  padding: 15px;
+  background-color: white;
+  margin: 15px;
+}
+img.imagefloatright {
+  float: right;
+  margin-left: 50px;
+}
+ul, ol {
+  color:#e6ccb3;
+  padding: 0 25px;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+nav {
+  color:#e6ccb3;
+  background-color:#4d3319;
+  line-height: 200%;
+  font-family: "Handlee", Helvetica;
+}
+nav li {
+  display: inline;
+  padding-right: 50px;
+}
+
+nav a {
+  color:#e6ccb3;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: black;
+}
+span.brownbold {
+  font-weight: bold;
+  color:#e6ccb3;
+}

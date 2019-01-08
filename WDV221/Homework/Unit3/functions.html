@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WDV221 Intro to JavaScript: Functions</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Functions">
+    <meta name="keywords" content="student, resources, computer, engineering, learning">
+    <!-- 	Christina Buchwald
+      Date: Sept 22, 2018
+      WDV221 Home Page	-->
+    <style>
+      body{  background-color: rgb(214, 128, 171)  }
+    </style>
+    <script>
+      // This function is to display a name during runtime via alert
+      function sayHello(name)
+      {
+        alert("Hello, " + name + ".");
+        return;
+      }
+      // This function prints a name during runtime
+      function printHello(name)
+      {
+        document.write("Hello, " + name + "!");
+        return;
+      }
+      // This function displays the number of characters in a inString
+      function characterCount()
+      {
+        var testString = prompt("Please enter a sentence of your choice: ");
+        var lengthResult = testString.length;
+        alert("There are " + lengthResult + " characters in your string.");
+        return;
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      var name = prompt("Please enter your name: ");
+      sayHello(name);
+    </script>
+    <h1><script>printHello(name)</script></h1>
+    <h2><script>printHello(name)</script></h2>
+    <button onclick="characterCount()">Characters in a string</button>
+  </body>
+</html>

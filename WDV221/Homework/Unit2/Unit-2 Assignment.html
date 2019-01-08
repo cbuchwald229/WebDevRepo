@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>WDV221 Intro Javascript - Variables and Data Types Assignment</title>
+		<!-- 	Christina Buchwald
+			Date: Aug 29, 2018
+			Home Page	-->
+		<style>
+		body {background-color:#FC6;
+		}
+		.highlightTitle	{
+			font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+			font-style:italic;
+			font-size:14px;
+			text-decoration:underline;
+			color:#096;
+		}
+		</style>
+	</head>
+	<body>
+		<h2>WDV221 Intro Javascript</h2>
+		<h3>Unit-2 - Variables Assignment</h3>
+		<hr />
+		<script>
+			var schoolName = "DMACC";
+			var courseName = "WDV221 Intro to Javascript";
+			var testScore = 100.00;
+			var courseGrade;
+			var courseCompleted = false;
+			var substring = "WDV";
+			var containsSubstring;
+
+			constainsSubstring = courseName.includes(substring);
+		</script>
+		<p>
+			<script>
+				// This is for exercise 1. This is displaying the variable schoolName
+				document.write("I currently attend the school " + schoolName + ".");
+			</script>
+		</p>
+		<p>
+			<script>
+				// This is for exercise 2. This is displaying the variable courseName
+				document.write("I am in the class " + courseName + ".");
+			</script>
+		</p>
+		<p>
+			<script>
+				// This is the dot length exercise. This is displaying the variable courseName's number of characters
+				document.write("The variable courseName has " + courseName.length + " characters in it.");
+			</script>
+		</p>
+		<p>
+			<script>
+				// This is the uppercase exercise. This is displaying the variable courseName's in all caps
+				document.write("The variable courseName in uppercase: " + courseName.toUpperCase() + ".");
+			</script>
+		</p>
+		<p>
+			<script>
+				// This is the substring exercise. This is seeing if the string contains WDV
+				document.write("The courseName variable contains WDV: " + constainsSubstring + ".");
+			</script>
+		</p>
+		<p>
+			<script>
+				// This is for exercise 3. This is displaying the variable testScore
+				document.write("My most recent test score was " + testScore + "!!");
+			</script>
+		</p>
+		<p>
+			<script>
+				// This is for exercise 4. This is displaying the variable courseGrade
+				document.write("My current course grade is: " + courseGrade + ".");
+			</script>
+		</p>
+		<p>
+			<script>
+				// This is for exercise 5. This is displaying the variable courseCompleted
+				document.write("I have completed this course: " + courseCompleted + ".");
+		</script>
+		<hr />
+		<p>Please complete the following exercises on this page. When complete, post this page to your server. Make a link in your WDV221 homework  page for this assignment.</p>
+		<p>Submit this assignment on Blackboard. Please include a link to your homework page.</p>
+		<h3>For each exercise use a comment line to put the Exercise number within the script. Also place a short description of what the script is doing.</h3>
+		<hr />
+		<p>1. Define a String variable called schoolName and assign it a value of DMACC.</p>
+		<p>2. Define a String variable called courseName and assign it a value of WDV221 Intro Javascript</p>
+		<p>3. Define a Numeric variable called testScore and assign it a value of 100.00. </p>
+		<p>4. Define a Numeric variable called courseGrade. Do not give it a value.</p>
+		<p>5. Define a Boolean variable called courseCompleted. Give it a value of false.</p>
+		<p>Display the value of all the variables in their own paragraphs below. </p>
+		<p>Display the number of characters in the course name.</p>
+		<p>Display the course name as all uppercase letters.</p>
+		<p>Using the String Object determine if the course name contains the letters WDV?  Look at the String methods. Does one or more of them look inside the variable for specific content?</p>
+	</body>
+</html>

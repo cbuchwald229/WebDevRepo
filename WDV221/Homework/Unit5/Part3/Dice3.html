@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV221 Intro Javascript</title>
+<script>
+/*
+---Event Driven---
+Unit 5 Events
+	Write a function that triggers from the change of the list to display a message in the SettingsMessage html depending on the difficulty settings
+		Use the procided getSelectedSettingOptionText function to get the difficulty
+		Display the message "Settings change to <difficulty" for example "Settings changed to hard"
+	Write a function that adjusts src of an image. This will take the id of the image, and the path to the image.
+		ex: adjustImage(inID, inImagePath)
+	Call the function twice to set the image of dice1 and dice2 to "1.PNG"
+	Change the wins button to fill in the HTML WinsSection with the message of wins for player.
+*/
+	//---Global Vars---
+	var PlayerName;
+	var Wins = 0;
+	//------------
+	PlayerName = prompt("Please enter your name.");
+	function getWins(name)
+	{
+		document.getElementById("WinsSection").innerHTML = PlayerName + " has 0 wins";
+	}
+	function adjustImage(inID, inImagePath)
+	{
+		var dice = document.getElementById(inID);
+		dice.src = inImagePath;
+		return;
+	}
+	function changeSettingsMessage()
+	{
+		document.getElementById("SettingsMessage").innerHTML = "Settings changed to " + getSelectedSettingOptionText();
+	}
+	function formatSelectOption(inOption, inValue)
+	{
+		return "<option value='" + inValue + "'>" + inOption + "</option>";
+	}
+	function getSelectedSettingOptionText()
+	{
+		var x = document.getElementById("SettingsSelectList");
+		return x.selectedOptions[0].innerHTML;
+	}
+  </script>
+</head>
+<body id="mainBody">
+<h1>Welcome <script>document.write(PlayerName); </script> </h1>
+<p id="WinsSection"></p>
+<h2 id="SettingsHeader">Settings</h2>
+	<p id="SettingsMessage"></p>
+	<!--Settings Section -->
+	<select id="SettingsSelectList" onchange="changeSettingsMessage()">
+	<script>
+		//Use JS to fill the list
+		document.write(formatSelectOption("Easy",2));
+		document.write(formatSelectOption("Regular",7));
+		document.write(formatSelectOption("Hard",10));
+	</script>
+	</select>
+<p>&nbsp;</p>
+<img src="" id="dice1" />
+<img src="" id="dice2" />
+<div>
+	<button onclick="adjustImage();">Load Dice</button>
+	<button onclick="getWins(PlayerName);">Wins</button>
+</div>
+<script>
+	//console.log(getWins(PlayerName));
+</script>
+<script>
+	adjustImage("dice1", "imgs/1.PNG");
+	adjustImage("dice2", "imgs/1.PNG")
+</script>
+</body>
+</html>

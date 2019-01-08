@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The Artistic Pawprint</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="Home Page for Christina Buchwald">
+		<meta name="keywords" content="art, artistic, pawprint, pottery, painting, drawing, spinning, crochet, computer, engineering, learning">
+		<link rel="stylesheet" type="text/css" href="css/my_webpage.css">
+		<!-- 	Christina Buchwald
+			Date: Aug 27, 2018
+			Home Page	-->
+			
+		<script>
+			function changeImg()
+			{
+				var cat = document.getElementById("bigCatImage");
+				if (cat.src.match("images/leopard.jpg"))
+				{
+					cat.src = "images/tiger.jpg"
+				}
+				else if (cat.src.match("images/tiger.jpg"))
+				{
+					cat.src = "images/panther.jpg";
+				}
+				else
+				{
+					cat.src = "images/leopard.jpg";
+				}
+				return;
+			}
+		</script>
+	</head>
+	<body>
+		<h1 class="centerheader"><img src="images/website_header.jpg" width="1240px" height="260px"/></h1>
+		<nav>
+			<ul>
+				<li>
+					<a href="index.htm"> Home </a>
+				</li>
+				<li>
+					<a href="WDV101/WDV101Intro.htm"> Homework for WDV101 </a>
+				</li>
+				<li>
+					<a href="WDV221/WDV221Intro.htm"> Homework for WDV221 </a>
+				</li>
+				<li>
+					<a href="artwork.htm"> Artwork </a>
+				</li>
+			</ul>
+		</nav>
+		<img src="images/leopard.jpg" id="bigCatImage" width=640px height=400px class="imagefloatright"/>
+		<h2> Hello, this is my first webpage! </h2>
+		<p>Please visit the above links to see my current portfolio of homework.</p>
+		<button onclick="changeImg()">Change Big Cat</button>
+	</body>
+</html>

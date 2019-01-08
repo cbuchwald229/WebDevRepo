@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WDV221 Intro to JavaScript: Unit 5</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Unit 5">
+    <meta name="keywords" content="student, resources, computer, engineering, learning">
+    <!-- 	Christina Buchwald
+      Date: Oct 7, 2018
+      WDV221 Home Page	-->
+    <style>
+      body{ background-color: #FAEBD7; color:#432109  ; }
+    </style>
+    <script>
+    function catMouseOver()
+    {
+      console.log("I love my cats");
+      var thisImage = document.getElementById("Cats");
+      thisImage.src = "../images/JackBlack.jpg";
+      return ;
+    }
+    function catMouseOut()
+    {
+      console.log("My cats are crazy");
+      var thisImage = document.getElementById("Cats");
+      thisImage.src = "../images/Peaches.jpg";
+      return ;
+    }
+    function dogMouseOver()
+    {
+      console.log("I love my dogs");
+      var thisImage = document.getElementById("Dogs");
+      thisImage.src = "../images/Willow.jpg";
+      return ;
+    }
+    function dogMouseOut()
+    {
+      console.log("My dogs are crazy");
+      var thisImage = document.getElementById("Dogs");
+      thisImage.src = "../images/Teddy.jpg";
+      return ;
+    }
+    function displayDate()
+    {
+      document.getElementById("dateAndTime").innerHTML = Date();
+    }
+    function change1()
+    {
+      var text = "PETS GALORE!!!";
+      document.getElementById("header2").innerHTML = text;
+      alert("Hello!");
+
+    }
+    function myFunction() {
+      var x = document.getElementById("mySelect").value;
+      document.getElementById("selection").innerHTML = "You selected: " + x;
+    }
+    </script>
+  </head>
+  <body id="body"onload="change1()">
+    <h1>Pets Galore!</h1>
+    <h2 id="header2"></h2>
+      <img src="../images/Teddy.jpg" id="Dogs"  width="148px" height="262px" onmouseover="dogMouseOver();" onmouseout="dogMouseOut();"/>
+      <img src="../images/Peaches.jpg" id="Cats" width="148px" height="262px" onmouseover="catMouseOver();" onmouseout="catMouseOut();"/>
+      <p><button onclick="displayDate()">Display Date and Time</button></p>
+      <p id="dateAndTime"></p>
+      <select id="mySelect" onchange="myFunction()">
+        <option value="Peaches">Peaches
+        <option value="Jack">Jack
+        <option value="Teddy">Teddy
+        <option value="Willow">Willow
+      </select>
+      <p id="selection"></p>
+  </body>
+</html>

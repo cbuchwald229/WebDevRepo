@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>WDV221 Intro Javascript</title>
+		<script>
+			//---Global Vars---
+			var PlayerName;
+			var Wins = 0;
+			//------------
+			PlayerName = prompt("Please enter your name.");
+			//------------
+			function displayWins(inName)
+			{
+				var result = inName + " has " + Wins + " wins."
+				alert(result);
+				return result;
+			}
+			//-------------
+			function difficultyOption(inNumber, inLevel)
+			{
+				var result = "<option value='" + inNumber + "'>" + inLevel +"</option>"
+				return result;
+			}
+		 </script>
+	</head>
+	<body id="mainBody">
+		<h1>Welcome <script>document.write(PlayerName); </script> </h1>
+		<h2>Settings<h2>
+		<!--Settings Section -->
+		<select>
+		<script>
+			//Use JS to fill the list
+			document.write(difficultyOption("2", "Easy"));
+			document.write(difficultyOption("5", "Medium"));
+			document.write(difficultyOption("7", "Hard"));
+		</script>
+		</select>
+		<p><button onclick="displayWins(PlayerName);">Wins</button></p>
+	</body>
+</html>

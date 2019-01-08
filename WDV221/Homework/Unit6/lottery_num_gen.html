@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Lottery Generator">
+    <meta name="keywords" content="lottery, balls, jackpot, generator, money, gambling">
+		<title>WDV221 Intro Javascript</title>
+		<style type="text/css">
+		body {
+			background-color: DarkOliveGreen;
+			color: LightGoldenRodYellow;
+		}
+		#lottery_numbers {
+			color: LightGoldenRodYellow;
+			font-size: 500%;
+		}
+		</style>
+		<script>
+			//---Global Vars---
+			var PlayerName = "New Player";
+			var LottoBall1 = 0;
+			var LottoBall2 = 0;
+			var LottoBall3 = 0;
+			var LottoBall4 = 0;
+			var LottoBall5 = 0;
+			var PowerBall = 0;
+			//------------
+			//--Player Functions--
+			function newPlayer()
+			{
+				PlayerName = document.getElementById("playerNameTxt").value;
+				document.getElementById("playerName").innerHTML = PlayerName;
+				return ;
+			}
+			//--Lottery Functions--
+			function generateLottoBall()
+			{
+				var number = Math.floor(Math.random() * (71 - 1) ) + 1
+			 	return number;
+			}
+			function generatePowerBall()
+			{
+				var number = Math.floor(Math.random() * (26 - 1) ) + 1
+			 	return number;
+			}
+			function generateFullLotteryNumber()
+			{
+				LottoBall1 = generateLottoBall();
+				LottoBall2 = generateLottoBall();
+				if (LottoBall2 == LottoBall1) {
+					LottoBall2 = generateLottoBall();
+				}
+				LottoBall3 = generateLottoBall();
+				if (LottoBall3 == LottoBall1 || LottoBall3 == LottoBall2) {
+					LottoBall3 = generateLottoBall();
+				}
+				LottoBall4 = generateLottoBall();
+				if (LottoBall4 == LottoBall1 || LottoBall4 == LottoBall2 || LottoBall4 == LottoBall3) {
+					LottoBall4 = generateLottoBall();
+				}
+				LottoBall5 = generateLottoBall();
+				if (LottoBall5 == LottoBall1 || LottoBall5 == LottoBall2 || LottoBall5 == LottoBall3  || LottoBall5 == LottoBall4) {
+					LottoBall5 = generateLottoBall();
+				}
+				PowerBall = generatePowerBall();
+
+				document.getElementById("lottoBall1").innerHTML = LottoBall1;
+				document.getElementById("lottoBall2").innerHTML = LottoBall2;
+				document.getElementById("lottoBall3").innerHTML = LottoBall3;
+				document.getElementById("lottoBall4").innerHTML = LottoBall4;
+				document.getElementById("lottoBall5").innerHTML = LottoBall5;
+				document.getElementById("powerball").innerHTML = PowerBall;
+			}
+			//--------
+		  </script>
+	</head>
+	<body id="mainBody">
+		<img src="../images/lotto_balls.jpg" id="Lotto Balls" style="float:right; border: 5px solid black;"/>
+		<h1>Welcome <span id="playerName"></span>!</h1>
+		<script>document.getElementById("playerName").innerHTML = PlayerName;</script>
+		<input type="text" id="playerNameTxt" placeholder="New Player"/>
+		<input type="button" value="New Player" id="newPlayerButton" onclick="newPlayer()"/>
+		<h2>Generate your lottery numbers below. Good luck!</h2>
+		<button onclick="generateFullLotteryNumber()">Generate Numbers</button>
+		<br>
+		<span id="lottery_numbers">
+			<span id="lottoBall1"></span>,<script>document.getElementById("lottoBall1").innerHTML = LottoBall1;</script>
+			<span id="lottoBall2"></span>,<script>document.getElementById("lottoBall2").innerHTML = LottoBall2;</script>
+			<span id="lottoBall3"></span>,<script>document.getElementById("lottoBall3").innerHTML = LottoBall3;</script>
+			<span id="lottoBall4"></span>,<script>document.getElementById("lottoBall4").innerHTML = LottoBall4;</script>
+			<span id="lottoBall5"></span>,<script>document.getElementById("lottoBall5").innerHTML = LottoBall5;</script>
+			<span id="powerball" style="color: red;"></span><script>document.getElementById("powerball").innerHTML = PowerBall;</script>
+		</span>
+	</body>
+</html>

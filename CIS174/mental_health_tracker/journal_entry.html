@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<title>Mental Health Tracker</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--  Name: Christina Buchwald
+				Date: 11/1/2018 -->
+	<script>
+		function newPlayer()
+		{
+			PlayerName = document.getElementById("playerNameTxt").value;
+			document.getElementById("playerName").innerHTML = PlayerName;
+			return ;
+		}
+	</script>
+	</head>
+	<body>
+	<header>
+		<img src="images/mental_health_tracker.jpg" alt="Health Tracker Image" height="150px" width="150px" style="float: left;">
+	  <link rel="stylesheet" type="text/css" href="css/mental_health_tracker.css">
+		<form style="float: right;">
+			<h1>Welcome <span id="playerName"></span>!</h1>
+			<button id="logoutButton" type="submit" class="button" onclick="">Log Out</button>
+		</form>
+		<h2>Mental Health Tracker</h2>
+	</header>
+
+	<section>
+	  <nav>
+	    <ul>
+				<li><a href="entry_overview.html">View Overview of Entries</a></li>
+	      <li><a href="journal_entry.html">Edit Entry for Today</a></li>
+	      <li><a href="statistics.html">Statistics</a></li>
+	    </ul>
+	  </nav>
+
+	  <article>
+			<form>
+				<label>Date: <span id="journalDate"></span></label><br/>
+				<label>Mood: </label>
+				<select>
+				  <option value="enum1">Depressed</option>
+				  <option value="enum2">Happy</option>
+				  <option value="enum3">Anxiety</option>
+				  <option value="enum4">Calm</option>
+				</select><br/>
+				<label>Journal: </label><br/><textarea rows="15" cols="100"></textarea><br/>
+				<label>Medications: </label><br/><textarea rows="2" cols="50"></textarea>
+			</form>
+	  </article>
+	</section>
+
+	<footer>
+	  <p>This site brought to you by: Christina Buchwald, Alek Brown, Zachary Hayes, James Robbins, Thomas Strutt</p>
+	</footer>
+
+	</body>
+</html>

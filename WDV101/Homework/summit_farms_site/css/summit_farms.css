@@ -1,0 +1,71 @@
+/* This is the css styling to the cocoa website */
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
+
+body  {
+  background-color: #cccccc;
+  font-family: Helvetica;
+}
+h1  {
+  color:black;
+  text-align: center;
+  word-spacing: 10px;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 300%;
+}
+h2  {
+  color:black;
+  font-family: 'Exo 2', sans-serif;
+}
+p{
+  color:black;
+}
+.graybold {
+  font-weight: bold;
+  color:#333333;
+}
+img {
+  border: 5px solid black;
+  padding: 3px;
+  margin: 15px;
+}
+img.imagefloatright {
+  float: right;
+  margin: 30px;
+}
+img.imagefloatleft {
+  float: left;
+  margin: 30px;
+}
+ul, ol {
+  color:black;
+  margin: 20px;
+}
+li, p {
+  line-height:1.5em;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+nav {
+  background-color:#333333;
+  line-height: 200%;
+  border-left: 20px solid red;
+  font-family: 'Exo 2', sans-serif;
+}
+nav li {
+  display: inline;
+  padding-right: 50px;
+  margin: 5px 10px;
+  text-decoration: none;
+}
+
+nav a {
+  color:red;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: white;
+}

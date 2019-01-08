@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A Basic Grid</title>
+  <style>
+    .grid-container {
+      display:grid;
+      grid-template-columns: auto auto auto;
+      grid-gap: 10px;
+      width: 80%;
+      margin: 10px auto;
+      padding: 10px;
+      background-color: darkblue;
+    }
+    .grid-item {
+      background-color: lightblue;
+      text-align: center;
+      padding: 10px;
+      font-size: 25px;
+      border: 1px solid red;
+    }
+    .item1 {
+      background-color: lightblue;
+      text-align: center;
+      padding: 10px;
+      font-size: 25px;
+      border: 1px solid red;
+      grid-column: 1 / span 3;
+    }
+    .item7 {
+      background-color: lightblue;
+      text-align: center;
+      padding: 10px;
+      font-size: 25px;
+      border: 1px solid red;
+      grid-column: 3;
+      grid-row: 3 / span 2;
+    }
+  </style>
+</head>
+<body>
+  <h1>The following is a grid using CSS grid.</h1>
+  <div class="grid-container">
+    <div class="item1">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+    <div class="item7">7</div>
+    <div class="grid-item">8</div>
+    <div class="grid-item">9</div>
+  </div> <!-- close grid-container -->
+</body>
+</html>

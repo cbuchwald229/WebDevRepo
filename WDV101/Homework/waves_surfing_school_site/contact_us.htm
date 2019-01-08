@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WAVES Surfing School Contact Page</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Contact page for WAVES Surfing School">
+    <meta name="keywords" content="surf, surfing, ocean, water, lessons, school, learning">
+    <meta content="True" name="HandheldFriendly">
+    <meta name="viewport" content="width=device-width, initial-scale=0.666667, maximum-scale=0.666667, user-scalable=0">
+    <meta name="viewport" content="width=device-width">
+    <style>
+    body {
+      font-family: "Helvetica", Arial, sans-serif;
+      color: #333;
+    }
+
+    #formcontainer {
+      background-color: #99d6ff;
+      width: 100%;
+      margin: 10px auto;
+      padding: 20px;
+      border: 2px solid black;
+      border-radius: 5px;
+    }
+
+    legend {
+      border-bottom: 2px dotted purple;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+      font-size: 1.3em;
+      width: 100%;
+    }
+
+    fieldset1 {
+      width: 25em;
+      margin: 20px;
+      padding: 15px;
+    }
+
+    fieldset1 div {
+      margin: 5px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    fieldset2 {
+      width: 25em;
+      margin: 20px;
+      padding: 15px;
+    }
+
+    fieldset2 div {
+      margin: 5px 0;
+      display: flex;
+      align-items: top;
+    }
+
+    label {
+      order: 1;
+      width: 10em;
+      text-align: right;
+      margin-right: 10px;
+    }
+
+    input, textarea, select {
+      font-size: 0.9em;
+      padding: 2px 5px 4px;
+      border-radius: 5px;
+      margin-top: 5px;
+      order: 2;
+      flex: 1 1 auto;
+    }
+
+    input[type=radio], input[type=checkbox] {
+      order:1;
+      flex: none;
+      width: auto;
+      margin-left: 10em;
+    }
+
+    input[type=radio] ~ label, input[type=checkbox] ~ label {
+      width: 25em;
+      text-align: left;
+      margin-left: 6px;
+    }
+
+    input[type=submit], input[type=reset] {
+      color: white;
+      background-color: black;
+      border-radius: 5px;
+      padding: 8px;
+      width: 50px;
+      margin-right: 10px;
+    }
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/waves.css">
+    <!--  Name: Christina Buchwald
+          Date: 12/08/2018 -->
+  </head>
+  <body>
+    <div>
+      <a href="index.htm">
+        <img src="images/waves_logo.jpg" alt="WAVES Surfing School Logo" class="intro">
+      </a>
+    </div>
+    <div>
+      <nav>
+        <ul>
+          <li><a href="index.htm">Home</a></li>
+          <li><a href="about_us.htm">About Us</a></li>
+          <li><a href="lessons.htm">Lessons</a></li>
+          <li><a href="camps.htm">Camps</a></li>
+          <li><a href="contact_us.htm">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div>
+      <img src="images/waves_contact_us.jpg" alt="WAVES Surfing School Contact Us">
+    </div>
+    <div class="row">
+      <header>Contact Us!</header>
+      <div class="flex-container">
+        <div class="column">
+          <img src="images/california.jpg" alt="California Beach">
+        </div>
+        <div class="column">
+          <div id="formcontainer">
+            <form id="contact" method="post" action="">
+              <legend>Contact Me!</legend>
+              <p style="font-style: italic;">Send me a message. I would love to hear from you!</p>
+              <fieldset1>
+                <div>
+                  <label for="firstname">First Name</label>
+                  <input id="firstname" name="firstname" type="text">
+                </div>
+                <div>
+                  <label for="lastname">Last Name</label>
+                  <input id="lastname" name="lastname" type="text">
+                </div>
+                <div>
+                  <label for="email">Email Address</label>
+                  <input id="email" name="email" type="text" placeholder="name@anywhere.com">
+                </div>
+                <div>
+                  <label for="topic">Topic</label>
+                  <select id="topic" name="topic">
+                    <option value="lessons">Lessons</option>
+                    <option value="open_houses">Open Houses</option>
+                    <option value="teachers">Teachers</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <p>Things I am interested in learning more about: </p>
+                <div>
+                  <input id="lessons" name="lessons" type="checkbox">
+                  <label>Lessons</label>
+                </div>
+                <div>
+                  <input id="instruct_here" name="instruct_here" type="checkbox">
+                  <label>Being a surf instructor</label>
+                </div>
+                <div>
+                  <input id="camp" name="camp" type="checkbox">
+                  <label>Camp</label>
+                </div>
+                <div>
+                  <input id="email_list" name="email_list" type="checkbox">
+                  <label>Become a part of our email list</label>
+                </div>
+              </fieldset1>
+              <fieldset2>
+                <div>
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message"></textarea>
+                </div>
+                <div>
+                  <input type="submit" id="button" name="button" value="Submit">
+                  <input type="reset" id="button" name="button" value="Reset">
+                </div>
+              </fieldset2>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <a href="http://www.twitter.com" target="_blank"><img src="images/twitter.jpg" alt="Twitter logo"></a>
+      <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.jpg" alt="Facebook logo"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.jpg" alt="Instagram logo"></a>
+      <a href="https://www.pinterest.com" target="_blank"><img src="images/pinterest.jpg" alt="Pinterest logo"></a>
+    </div>
+    <div class="footer2">
+      &#169; - Christina Buchwald 2018
+      <h4><a href="#top">Go to Top</a></h4>
+    </div>
+  </body>
+</html>

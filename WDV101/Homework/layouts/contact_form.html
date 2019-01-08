@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact Form</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Contact form">
+    <meta name="keywords" content="contact, form, example">
+    <!--  Name: Christina Buchwald
+          Date: 11/26/2018 -->
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Helvetica", Arial, sans-serif;
+        font-size: 125%;
+        color: #333;
+        background-color: #e2caf8;
+      }
+
+      #formcontainer {
+        background-color: lightgray;
+        width: 800px;
+        margin: 10px auto;
+        padding: 20px;
+        border: 2px solid black;
+        border-radius: 15px;
+      }
+
+      legend {
+        border-bottom: 2px dotted purple;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+        font-size: 1.3em;
+        width: 100%;
+      }
+
+      fieldset1 {
+        width: 25em;
+        margin: 20px;
+        padding: 15px;
+      }
+
+      fieldset1 div {
+        margin: 5px 0;
+        display: flex;
+        align-items: center;
+      }
+
+      fieldset2 {
+        width: 25em;
+        margin: 20px;
+        padding: 15px;
+      }
+
+      fieldset2 div {
+        margin: 5px 0;
+        display: flex;
+        align-items: top;
+      }
+
+      label {
+        order: 1;
+        width: 10em;
+        text-align: right;
+        margin-right: 10px;
+      }
+
+      input, textarea, select {
+        font-size: 0.9em;
+        padding: 2px 5px 4px;
+        border-radius: 5px;
+        margin-top: 5px;
+        order: 2;
+        flex: 1 1 auto;
+      }
+
+      input[type=radio], input[type=checkbox] {
+        order:1;
+        flex: none;
+        width: auto;
+        margin-left: 10em;
+      }
+
+      input[type=radio] ~ label, input[type=checkbox] ~ label {
+        width: 25em;
+        text-align: left;
+        margin-left: 6px;
+      }
+
+      input[type=submit], input[type=reset] {
+        color: white;
+        background-color: black;
+        border-radius: 50px;
+        padding: 8px;
+        width: 40px;
+        margin-right: 30px;
+      }
+
+      input[type=submit] {
+        margin-left: 255px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="formcontainer">
+      <form id="contact" method="post" action="contact_form_response.php">
+        <legend>Contact Me!</legend>
+        <p style="font-style: italic;">Send me a message. I would love to hear from you!</p>
+        <fieldset1>
+          <div>
+            <label for="firstname">First Name</label>
+            <input id="firstname" name="firstname" type="text">
+          </div>
+          <div>
+            <label for="lastname">Last Name</label>
+            <input id="lastname" name="lastname" type="text">
+          </div>
+          <div>
+            <label for="email">Email Address</label>
+            <input id="email" name="email" type="text" placeholder="name@anywhere.com">
+          </div>
+          <div>
+            <label for="topic">Topic</label>
+            <select id="topic" name="topic">
+              <option value="web">Web Development Services</option>
+              <option value="ux_ui">UX/UI Design</option>
+              <option value="resume">My Resume/Credentials</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <p>My major is...</p>
+          <div>
+            <input id="web_dev" name="major" type="radio">
+            <label>Web Development</label>
+          </div>
+          <div>
+            <input id="graphic_design" name="major" type="radio">
+            <label>Graphic Design</label>
+          </div>
+          <div>
+            <input id="obj_orient" name="major" type="radio">
+            <label>Object Oriented Development</label>
+          </div>
+          <p>My skills are...</p>
+          <div>
+            <input id="html/css" name="html/css" type="checkbox">
+            <label>Html/Css</label>
+          </div>
+          <div>
+            <input id="javascript" name="javascript" type="checkbox">
+            <label>Javascript</label>
+          </div>
+          <div>
+            <input id="java" name="java" type="checkbox">
+            <label>Java</label>
+          </div>
+          <div>
+            <input id="c#" name="c#" type="checkbox">
+            <label>C#</label>
+          </div>
+        </fieldset1>
+        <fieldset2>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" cols="40"></textarea>
+          </div>
+          <div>
+            <input type="submit" id="button" name="button" value="Submit">
+            <input type="reset" id="button" name="button" value="Reset">
+          </div>
+        </fieldset2>
+      </form>
+    </div>
+  </body>
+</html>

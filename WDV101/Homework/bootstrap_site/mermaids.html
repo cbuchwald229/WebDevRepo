@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+      /* Remove the navbar's default margin-bottom and rounded borders */
+      .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+      }
+
+      /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+      .row.content {height: 500px}
+
+      /* Set gray background color and 100% height */
+      .sidenav {
+        padding-top: 20px;
+        background-color:  #008aba;
+        height: 100%;
+      }
+
+      /* Set black background color, white text and some padding */
+      footer {
+        background-color: #750085;
+        color: white;
+        padding: 15px;
+      }
+
+      /* On small screens, set height to 'auto' for sidenav and grid */
+      @media screen and (max-width: 767px) {
+        .sidenav {
+          height: auto;
+          padding: 15px;
+        }
+        .row.content {height:auto;}
+      }
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="mermaids.html">Home</a></li>
+            <li class="active"><a href="mermaid_facts.html">Facts</a></li>
+            <li class="active"><a href="mermaid_about.html">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid text-center">
+      <div class="row content">
+        <div class="col-sm-2 sidenav">
+          <div class="well">
+            <p><img src="images/ad.jpg" width=50%/></p>
+          </div>
+          <div class="well">
+            <p><img src="images/ad.jpg" width=50%/></p>
+          </div>
+        </div>
+        <div class="col-sm-8 text-left">
+          <h1>Welcome to the Mermaid Site!</h1>
+          <p>In folklore, a mermaid is an aquatic creature with the head and upper body of a female human and the tail of a fish. Mermaids appear in the folklore of many cultures worldwide, including the Near East, Europe, Asia, and Africa. The first stories appeared in ancient Assyria, in which the goddess Atargatis transformed herself into a mermaid out of shame for accidentally killing her human lover. Mermaids are sometimes associated with perilous events such as floods, storms, shipwrecks, and drownings. In other folk traditions (or sometimes within the same tradition), they can be benevolent or beneficent, bestowing boons or falling in love with humans.</p>
+          <img src="images/purple_mermaid.jpg" width=300px />
+        </div>
+        <div class="col-sm-2 sidenav">
+          <div class="well">
+            <p><img src="images/ad.jpg" width=50%/></p>
+          </div>
+          <div class="well">
+            <p><img src="images/ad.jpg" width=50%/></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="container-fluid text-center">
+      <p>@Christina Buchwald</p>
+    </footer>
+
+  </body>
+</html>

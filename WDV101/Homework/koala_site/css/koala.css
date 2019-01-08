@@ -1,0 +1,123 @@
+/* This is the css styling to the koala website */
+@font-face {
+    font-family: "cantarellboldoblique";
+    src: url('../fonts/cantarell_boldoblique_macroman/Cantarell-BoldOblique-webfont.eot');
+    src: url('../fonts/cantarell_boldoblique_macroman/Cantarell-BoldOblique-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/cantarell_boldoblique_macroman/Cantarell-BoldOblique-webfont.woff2') format('woff2'),
+         url('../fonts/cantarell_boldoblique_macroman/Cantarell-BoldOblique-webfont.woff') format('woff'),
+         url('../fonts/cantarell_boldoblique_macroman/Cantarell-BoldOblique-webfont.ttf') format('truetype'),
+         url('../fonts/cantarell_boldoblique_macroman/Cantarell-BoldOblique-webfont.svg#cantarellboldoblique') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body  {
+  color:#14141f;
+  background-color: #c2c2d6;
+  font-family: "cantarellboldoblique", Helvetica;
+}
+h1  {
+  background-color:#666699;
+  text-align: center;
+  text-decoration: underline overline;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  font-family: "cantarellboldoblique", Helvetica;
+  padding: 10px 0;
+}
+/*Box Model example*/
+img {
+  border: 3px solid black;
+  padding: 15px;
+  background-color: white;
+  margin: 15px;
+}
+
+/*This is an example of a grouped selector*/
+
+h3,h4  {
+  font-family: "cantarellboldoblique", Helvetica;
+  margin-top: 25px;
+  border-top: 2px solid green;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+p{
+  font-size:1.1em;
+  line-height: 1.5;
+  font-family: "cantarellboldoblique", Helvetica;
+}
+
+/*This is an example of a descendant selector*/
+p em {
+  text-decoration: underline;
+}
+
+ul li {
+  list-style-type: square;
+}
+
+nav li {
+  display: inline;
+  padding-right: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: black;
+  padding: 4px 8px;
+}
+
+/*The following is an example of an independent class*/
+
+.special {
+  color: slategray;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.center {
+    display: block;
+    margin: 0 auto;
+    border: hidden;
+    padding: 0;
+  }
+
+.clear {
+  clear: both;
+}
+/*The following is an example of an dependent class*/
+
+p.greenbold {
+  color:green;
+  font-weight: bold;
+}
+
+img.imagefloatleft {
+  float: left;
+  margin-right: 50px;
+}
+
+img.imagefloatright {
+  float: right;
+  margin-left: 50px;
+}
+
+/*The following are examples of pseudo classes*/
+
+/*a {
+  color: red;
+}*/
+
+a:hover {
+  color: green;
+}
+
+/*
+a:visited {
+  color: orange;
+}*/

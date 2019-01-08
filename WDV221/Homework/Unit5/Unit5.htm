@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WDV221 Intro to JavaScript: Unit 5</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Unit 5">
+    <meta name="keywords" content="student, resources, computer, engineering, learning">
+    <!-- 	Christina Buchwald
+      Date: Oct 1, 2018
+      WDV221 Home Page	-->
+    <style>
+      body{ background-color: #ffff99; color:#000080  ; }
+    </style>
+    <script>
+    function imgMouseOver()
+    {
+      console.log("I love Doctor Who");
+      var thisImage = document.getElementById("Tardis");
+      thisImage.addEventListener("click", specialEvent, false);
+      return ;
+    }
+    function specialEvent()
+    {
+      alert("Wibbily Wobbily Timey Wimey... Stuff");
+      return;
+    }
+    </script>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <img src="../images/tardis.png" id="Tardis" width="125px" height="213px" onmouseover="imgMouseOver();"/>
+  </body>
+</html>

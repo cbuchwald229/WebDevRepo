@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WDV221 Intro to JavaScript: Unit 6</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Unit 5">
+    <meta name="keywords" content="student, resources, computer, engineering, learning">
+    <!-- 	Christina Buchwald
+      Date: Oct 15, 2018
+      WDV221 Home Page	-->
+    <style>
+      body{ background-color: MediumSeaGreen; color:#000066  ; }
+    </style>
+    <script>
+      function getYear()
+      {
+        var localYear = document.getElementById("Year");
+        console.log(localYear.val);
+
+        document.getElementById("YearDisplay").value = localYear.value;
+        return;
+      }
+      function getYearPlusTen()
+      {
+        var localYear = document.getElementById("Year").value;
+        localYear = parseInt(localYear); // Convert string to number
+        localYear += 10 // Add 10
+        document.getElementById("YearDisplay").value = localYear;
+        return;
+      }
+    </script>
+  </head>
+  <body id="main body">
+    <img src="../images/math.png" id="Math" width="500px" height="500px" onmouseover="imgMouseOver();"style="float:right"/>
+    <h1>Math</h1>
+    <p><label for="Year">Year</label></p>
+    <p><input type="text" id="Year"/>
+    <input type="button" value="Get Year" onclick="getYear()"/>
+    <input type="button" value="Get Year Plus 10" onclick="getYearPlusTen()"/></p>
+    <p><input type="text" id="YearDisplay"/></p>
+</html>

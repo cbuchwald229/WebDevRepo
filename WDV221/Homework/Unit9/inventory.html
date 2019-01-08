@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WDV221 Intro Javascript - Arrays</title>
+<style>
+	body{ background-color: #ff69b4; color: black; }
+</style>
+<script>
+	var products = ["Pen", "Paper", "Pencil"];
+	var inventory = [0, 0, 0];
+	function addInventory()
+	{
+		var itemList = document.getElementById("productList");
+		for(var x = 0; x < products.length; x++)
+		{
+			if(itemList.options[x].selected==true)
+			{
+				inventory[x] = inventory[x]+1;
+			}
+		}
+		DisplayList();
+	}
+	function subtractInventory()
+	{
+		var itemList = document.getElementById("productList");
+		for(var x = 0; x < products.length; x++)
+		{
+			if(itemList.options[x].selected==true)
+			{
+				if(inventory[x]==0)
+				{
+					inventory[x] = inventory[x];
+				}
+				if(inventory[x]>0)
+				{
+					inventory[x] = inventory[x]-1;
+				}
+			}
+		}
+		DisplayList();
+	}
+	function DisplayList()
+	{
+		var newList = "<ul>";
+		for(var i=0; i<products.length; i++)
+		{
+			newList += ("<li>"+products[i]+ ": " + inventory[i]+"</li>");
+		}
+		newList += "</ul>";
+		document.getElementById("InventoryList").innerHTML = newList;
+	}
+</script>
+</head>
+<body>
+<h1>Inventory</h1>
+<hr/>
+<img src="imgs/pen_paper_pencil.jpg" alt="Pen Paper Pencil" style="float: right; border: black solid 3px; padding: 5px;">
+<p>Please select a product:
+	<select name="product" id="productList">
+		<script>
+			for(var x=0; x<products.length; x++)
+			{
+				var msg = "<option value=" + products[x] + ">";
+				msg = msg + products[x];
+				msg = msg + "</option>";
+				document.write(msg);
+			}
+		</script>
+	</select>
+	<br/>
+	<input type="button" name="add" id="addItem" value="Add" onclick="addInventory()"/>
+	<input type="button" name="subtract" id="subtractItem" value="Subtract" onclick="subtractInventory()"/>
+</p>
+    <span id="InventoryList"></span>
+</body>
+</html>

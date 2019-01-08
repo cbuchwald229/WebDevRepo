@@ -1,0 +1,88 @@
+/* This css file uses semantic elements, div id's, and the float property for the layout structure. */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  width: 963px;
+  margin: 10px auto;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 25px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+header {
+  text-align: center;
+}
+
+header img {
+  display: block;
+  border:hidden;
+  padding: 0;
+  margin: 0 auto;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+nav {
+  background-color:#666699;
+  line-height: 200%;
+  border-left: 12px solid green;
+  padding: 10px;
+}
+
+main {
+  padding: 15px;
+}
+
+footer {
+  background-color:#666699;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-end;
+  list-style-type: none;
+}
+
+nav a {
+  color: white;
+  background-color: green;
+  display: block;
+  padding: 10px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 5px;
+  text-align: center;
+}
+
+nav li:first-child {
+  margin-right: auto;
+}
+
+nav a:hover {
+  color: white;
+  background-color: black;
+  display: block;
+  padding: 10px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 5px;
+  text-align: center;
+}
+
+.home {
+  background-color: black;
+}
+
+.home:hover {
+  background-color: green;
+}

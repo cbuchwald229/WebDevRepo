@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+      /* Remove the navbar's default margin-bottom and rounded borders */
+      .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+      }
+
+      /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+      .row.content {height: 500px}
+
+      /* Set gray background color and 100% height */
+      .sidenav {
+        padding-top: 20px;
+        background-color:  #008aba;
+        height: 100%;
+      }
+
+      /* Set black background color, white text and some padding */
+      footer {
+        background-color: #750085;
+        color: white;
+        padding: 15px;
+      }
+
+      /* On small screens, set height to 'auto' for sidenav and grid */
+      @media screen and (max-width: 767px) {
+        .sidenav {
+          height: auto;
+          padding: 15px;
+        }
+        .row.content {height:auto;}
+      }
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="mermaids.html">Home</a></li>
+            <li class="active"><a href="mermaid_facts.html">Facts</a></li>
+            <li class="active"><a href="mermaid_about.html">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid text-center">
+      <div class="row content">
+        <div class="col-sm-2 sidenav">
+          <div class="well">
+            <p><img src="images/ad.jpg" width=50%/></p>
+          </div>
+          <div class="well">
+            <p><img src="images/ad.jpg" width=50%/></p>
+          </div>
+        </div>
+        <div class="col-sm-8 text-left">
+          <h1>Fast Facts</h1>
+          <h3>Modern mermaids?</h3>
+          <p>Could there be a scientific basis for the mermaid stories? Some researchers believe that sightings of human-size ocean animals such as manatees and dugongs might have inspired merfolk legends. These animals have a flat, mermaid-like tail and two flippers that resemble stubby arms. They don't look exactly like a typical mermaid or merman, of course, but many sightings were from quite a distance away, and being mostly submerged in water and waves only parts of their bodies were visible. Identifying animals in water is inherently problematic, since eyewitnesses by definition are only seeing a small part of the creature. When you add in the factor of low light at sunset and the distances involved, positively identifying even a known creature can be very difficult.</p>
+          <h3>'Real' mermaids?</h3>
+          <p>The reality of mermaids was assumed during medieval times, when they were depicted matter-of-factly alongside known aquatic animals such as whales. Hundreds of years ago sailors and residents in coastal towns around the world told of encountering the sea maidens. One story dating back to the 1600s claimed that a mermaid had entered Holland through a dike, and was injured in the process. She was taken to a nearby lake and soon nursed back to health. She eventually became a productive citizen, learning to speak Dutch, perform household chores, and eventually converted to Catholicism.</p>
+        </div>
+        <div class="col-sm-2 sidenav">
+          <div class="well">
+            <p><img src="images/ad.jpg" width=50%/></p>
+          </div>
+          <div class="well">
+            <p><img src="images/ad.jpg" width=50%/></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="container-fluid text-center">
+      <p>@Christina Buchwald</p>
+    </footer>
+
+  </body>
+</html>

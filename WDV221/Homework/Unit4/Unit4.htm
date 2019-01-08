@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WDV221 Intro to JavaScript: Unit 4</title>
+    <script src="../scripts/formatFunction.js"></script>
+    <script src="../scripts/currencyFormat.js"></script>
+    <script src="../scripts/dateFunction.js"></script>
+    <meta charset="UTF-8">
+    <meta name="description" content="Unit 4">
+    <meta name="keywords" content="student, resources, computer, engineering, learning">
+    <!-- 	Christina Buchwald
+      Date: Sept 24, 2018
+      WDV221 Home Page	-->
+    <style>
+      body{ background-color:DarkMagenta; color:White; }
+    </style>
+    <script>
+      //alert(myemail.substr(0,7)); // start at position 0 get 7 characters
+      //alert(myemail.substring(0,7)); // start at position 0 up to but not including 7
+      function displayEmailName()
+      {
+        var myemail = prompt("Please enter your email address")
+        var pos = myemail.indexOf("@");
+
+        alert("Prefix: " + myemail.substr(0,pos));
+        alert("Postfix: " + myemail.substring(pos+1));
+        return;
+      }
+      function formatMoney() {
+        var dollarAmt = prompt("Please enter the dollar value");
+        alert(testFormat(dollarAmt));
+        return;
+      }//end currencyFormat
+      function formatDate()
+      {
+        var todayEu = getCurrentDate() + " " +
+                      getCurrentMonthName() + " " +
+                      getCurrentYear();
+        alert(todayEu);
+        return;
+      }
+      function getHeading1Object()
+      {
+        var h1dom = document.getElementById("heading1");
+        var innerText = h1dom.innerHTML;
+        alert(innerText);
+      }
+      function changeImg()
+      {
+        var puppy = document.getElementById("puppyImage");
+        if (puppy.src.match("../images/bernese.jpg"))
+        {
+          puppy.src = "../images/dalmation.jpg"
+        }
+        else
+        {
+          puppy.src = "../images/bernese.jpg";
+        }
+        return;
+      }
+    </script>
+  </head>
+  <body>
+    <h1 id="heading1">Welcome to string functions!</h1>
+    <img src="../images/dalmation.jpg" id="puppyImage" width="293px" height="180"/>
+    <p>Try the below buttons: </p>
+    <p>
+      <button onclick="formatMoney()">Format Dollar Amount</button>
+      <button onclick="formatDate()">Format Today's Date</button>
+      <button onclick="displayEmailName()">Display Email Parts</button>
+    </p>
+    <p>
+      <button onclick="getHeading1Object()">Get Heading 1</button>
+      <button onclick="changeImg()">Change Puppy</button>
+    </p>
+  </body>
+</html>

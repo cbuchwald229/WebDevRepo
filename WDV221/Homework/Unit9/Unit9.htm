@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>WDV221 Intro Javascript - Arrays</title>
+    <style>
+      body{ background-color: red; color: black; }
+    </style>
+  </head>
+  <body>
+    <img src="imgs/soda_pop.jpg" alt="Different Soda Cans" style="float: right; border: black solid 3px; padding: 5px;">
+    <h1>Soda Pop</h1>
+    <script>
+      var pops = ["Coke", "Pepsi", "Mt. Dew", "Dr. Pepper", "Cherry Coke"]; //creates an array of 3 drinks
+      for(var i = 0; i < pops.length; i++)
+      {
+        document.write("<h3>"+pops[i]+"</h3>");
+      }
+    </script>
+    <h1>Groceries</h1>
+      <script>
+        var list = [];
+        function AddItem()
+        {
+          var item = document.getElementById("newItem").value;
+          list.push(item);
+          document.getElementById("newItem").value = "";
+          DisplayList();
+        }
+        function DisplayList()
+        {
+          document.getElementById("newItem").innerHTML = "";
+          var newList = "<ul>";
+          for(var i=0; i<list.length; i++)
+          {
+            newList += ("<li>"+list[i]+"</li>");
+          }
+          newList += "</ul>";
+          document.getElementById("GroceryList").innerHTML = newList;
+        }
+    </script>
+    <label for="newItem">Add Item</label>
+    <input type="text" id="newItem"/>
+    <input type="button" onclick="AddItem()" value="Add Item"/>
+    <span id="GroceryList"></span>
+  </body>
+</html>

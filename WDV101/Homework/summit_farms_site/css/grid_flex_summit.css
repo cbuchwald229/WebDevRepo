@@ -1,0 +1,195 @@
+/* This is the css styling to the cocoa website */
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
+/* This css file uses semantic elements, div ids, and the float property for the layout structure */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing:border-box;
+	font-family: "cantarellboldoblique", Helvetica;
+}
+
+.grid-container {
+  display:grid;
+  grid-template-areas:
+  'header header header header'
+  'nav nav nav nav'
+  'main main main main'
+  'footer footer footer footer';
+  grid-gap: 0;
+  background-color:#666699;
+	color: black;
+  padding: 0;
+  margin: 10px auto;
+  border: 2px solid black;
+  width: 80%;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.grid-container2 {
+  display:grid;
+  grid-template-areas:
+  'header header header header'
+  'nav nav nav nav'
+  'left left main main'
+  'footer footer footer footer';
+  grid-gap: 0;
+  background-color:#666699;
+	color: black;
+  padding: 0;
+  margin: 10px auto;
+  border: 2px solid black;
+  width: 80%;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.grid-container3 {
+  display:grid;
+  grid-template-areas:
+  'header header header header header header'
+  'nav nav nav nav nav nav'
+  'left left main main right right'
+  'footer footer footer footer footer footer';
+  grid-gap: 0;
+  background-color: #666699;
+  color: black;
+  padding: 0;
+  width: 80%;
+  margin: 10px auto;
+  border: 2px solid black;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.item1 { grid-area: header;
+  text-align: center;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+	width: 100%;
+}
+.item1 img {
+  display: block;
+  border:hidden;
+  padding: 0;
+  margin: 0 auto;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  width: 100%;
+}
+.item2 {
+	grid-area: nav;
+	color: white;
+}
+.item3 {
+	grid-area: left;
+	background-color: white;
+  border-right: solid black 3px;
+	padding: 0 40px;
+	width: 100%;
+}
+.item3 img {
+  border: 3px solid black;
+  padding: 5px;
+  background-color: white;
+  margin: 15px;
+}
+.item4 img {
+  border: 3px solid black;
+  padding: 5px;
+  background-color: white;
+  margin: 15px;
+}
+.item4 {
+	grid-area: main;
+	background-color: white;
+	padding: 20px;
+	width: 100%;
+}
+.item5 {
+	grid-area: footer;
+	background-color:#666699;
+	border-bottom-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+	text-align: center;
+}
+.item6 {
+	grid-area: right;
+	background-color: orange;
+	padding: 10px;
+}
+
+.grid-container3 .item3 {
+	grid-area: left;
+	background-color: white;
+	border-right: 2px solid black;
+  font-size: 1em;
+}
+
+.grid-container3 .item4 {
+	grid-area: main;
+	background-color: white;
+}
+
+.grid-container3 .item6 {
+	grid-area: right;
+	background-color: white;
+	border-left: 2px solid black;
+}
+
+body{
+	background-color:#BDCFDB;
+	font-family:"Helvetica", "Arial", "Verdana", "sans-serif";
+}
+
+img.center  {
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+  width: 100%;
+}
+
+img.imagefloatleft  {
+	float: left;
+	margin-right: 30px;
+}
+
+img.imagefloatright {
+	float: right;
+  margin-left: 30px;
+}
+
+.clear  {
+	clear:both;
+}
+
+.home {
+  background-color: black;
+}
+
+.home:hover {
+  background-color: green;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-container > div {
+  width: 350px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}

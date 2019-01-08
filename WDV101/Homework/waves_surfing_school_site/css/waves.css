@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+img {
+  width: 100%;
+}
+nav {
+  font-family: 'Permanent Marker', sans-serif;
+  font-size: 1.2em;
+  position:static;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  list-style-type: none;
+}
+nav a {
+  color: #00098b;
+  display: block;
+  padding: 5px 25px;
+  text-decoration: none;
+  margin: 10px;
+  width: 100px;
+  text-align: center;
+}
+nav a:hover {
+  color: white;
+  background-color: #00098b;
+  display: block;
+  padding: 5px 25px;
+  text-decoration: none;
+  margin: 10px;
+}
+.intro {
+  width: 90px;
+  float: left;
+}
+.flex-container  {
+     display:flex;
+     flex-wrap: wrap;
+     justify-content: center;
+  }
+.banner {
+  background-color: lightgray;
+  color: black;
+  padding: 1px;
+  font-family: 'Permanent Marker', sans-serif;
+  text-align: right;
+}
+.header {
+  text-align: center;
+  padding: 10px;
+  font-family: 'Permanent Marker', sans-serif;
+}
+/* Create three equal columns next to each other */
+.column {
+  text-align: left;
+  flex:25%;
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+.column img {
+  width:90%;
+  vertical-align: middle;
+  margin: 10px;
+  padding: 5px;
+  border: black 3px solid;
+}
+.column p {
+  padding: 0 10px;
+}
+.row  {
+    display;flex;
+    flex-wrap:wrap;
+  }
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.footer {
+  color: black;
+  text-align: center;
+}
+.footer img {
+  width: 50px;
+}
+.footer2 {
+  background-color: lightgray;
+  color: black;
+  text-align: center;
+  padding: 10px;
+}
+@media only screen and (max-width: 768px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+*  {box-sizing: border-box;
+}
+body {
+  margin: 10px;
+  font-family: "Helvetica", Arial, sans-serif;
+}
+#container {
+  background-color:#ffd0e9;
+  padding: 10px;
+  width:90%;
+  margin: 20px auto;
+  border-bottom-left-radius:25px;
+  border-bottom-right-radius:25px;
+  border-top-left-radius:25px;
+  border-top-right-radius:25px;
+  border: 2px solid black;
+}
+header {
+  text-align: center;
+  padding: 25px;
+  font-size: 2em;
+  font-weight: bold;
+  font-style: oblique;
+  font-family: 'Permanent Marker', sans-serif;
+}
+figcaption  {
+  font-style: italic;
+  margin: 5px;
+  text-align: center;
+}
+figure {
+  border: 2px solid black;
+  padding: 10px;
+  background-color: #00342e;
+  color: white;
+  width: 300px;
+  border-bottom-left-radius:10px;
+  border-bottom-right-radius:10px;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+figure img  {
+  display: block;
+  margin: 0 auto;
+}
+h1, h2, h3 {
+  padding: 10px;
+  font-family: 'Permanent Marker', sans-serif;
+}
+a.redbold {
+  font-weight: bold;
+  color: red;
+  text-decoration: none;
+}
+.bluebold {
+  font-weight: bold;
+  color: blue;
+  font-style: italic;
+}
+p::first-letter {
+  font-size: x-large;
+}

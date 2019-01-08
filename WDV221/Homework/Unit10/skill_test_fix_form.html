@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>WDV221 Intro Javascript - Skill Test Form Calculations</title>
+		<style>
+			body{ background-color: #990000; color: white; }
+		</style>
+		<script src="dateFunctions.js"></script>
+		<script src="formatFunctions.js"></script>
+		<script>
+			var totalSales = 0;						//initialize Total Sales
+			var inventory = [];
+			var price = [];
+			function AddItem(inItem, inPrice)
+			{
+				inventory.push(inItem);
+				price.push(inPrice);
+				DisplayList();
+			}
+			function DisplayList()
+			{
+				var newList = "<ul>";
+				for(var i=0; i<inventory.length; i++)
+				{
+					newList += ("<li>"+inventory[i]+" "+price[i]+"</li>");
+				}
+				newList += "</ul>";
+				document.getElementById("displayOrder").innerHTML = newList;
+			}
+			function processOrder() {
+				//alert("inside processOrder()");
+				//get information from form
+				var inProductName = document.getElementById("item_name").value;		//get Product name
+				var inPrice = document.getElementById("item_price").value;			//get price
+				var inQuantity = document.getElementById("item_quantity").value;	//get quantity
+				//calculate Sale Price for the order
+				if(  isNaN(parseInt(inPrice))  ||  isNaN(parseInt(inQuantity))  )
+				{
+					alert("Bad input!");
+				}
+				else {
+					var salePrice = inPrice * inQuantity;								//calculate the Sale Price
+					//alert("Sale Price is : " + salePrice);
+					var formattedSalePrice = dollarFormat(salePrice+"");				//turn number into currency format
+					document.getElementById("outSalePrice").innerHTML = formattedSalePrice;		//display Sale Price
+
+					//add Sale Price for the order to the Total Sales
+					totalSales += salePrice;											//add current sale to total sales
+					//alert("Total Sales is: " + totalSales);
+					var formattedTotalSales = dollarFormat(totalSales+"");				//turn number into currency format
+					document.getElementById("outTotalSales").innerHTML = formattedTotalSales;	//display Total Sales
+
+					//Display the Name and Sale Price to the order list
+					AddItem(inProductName, formattedSalePrice);
+				}
+			}
+			function clearSale() {
+				//alert("inside clearSale()");
+				document.getElementById("item_name").value = "";
+				document.getElementById("item_price").value = "";
+				document.getElementById("item_quantity").value = "";
+				document.getElementById("outSalePrice").innerHTML = "";			//clear Sale Price for new order
+			}
+			function clearOrder() {
+				//alert("inside clearOrder()");
+				document.getElementById("outTotalSales").innerHTML = "";
+				document.getElementById("displayOrder").innerHTML = "";
+			}
+		</script>
+	</head>
+	<body>
+		<h1>WDV221 Intro Javascript</h1>
+		<h2>Skill Test - Fix Form</h2>
+		<form id="form1" name="form1" method="post" action="">
+		  <table>
+		     <tr>
+		      <td>Item Name:</td>
+          <td><input type="text" name="textfield" id="item_name" /></td>
+		    </tr>
+		    <tr>
+		      <td>Item Price:</td>
+          <td><input type="text" name="textfield" id="item_price" /></td>
+		    </tr>
+		    <tr>
+		      <td>Number Purchased:</td>
+          <td><input type="text" name="textfield2" id="item_quantity" /></td>
+		    </tr>
+		    <tr>
+		      <td>Sale Price: </td>
+		      <td><span id="outSalePrice"></span></td>
+		    </tr>
+		    <tr>
+		      <td>&nbsp;</td>
+		      <td>&nbsp;</td>
+		    </tr>
+		    <tr>
+		      <td>Total Sales: </td>
+		      <td><span id="outTotalSales"></span></td>
+		    </tr>
+		  </table>
+		  <p>
+		    <input type="button" name="button" id="button" value="Submit Order" onclick="processOrder()"/>
+		    <input type="button" name="button2" id="button2" value="Clear Sale" onclick="clearSale()" />
+		    <input type="button" name="button3" id="button3" value="Clear Order" onclick="clearOrder()" />
+		  </p>
+		</form>
+		<h2>Javascript Supplies - Invoice</h2>
+		<span id="displayOrder"></span>
+	</body>
+</html>

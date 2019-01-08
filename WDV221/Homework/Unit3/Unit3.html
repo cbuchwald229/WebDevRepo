@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WDV221 Intro to JavaScript: Unit 3</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Unit 3">
+    <meta name="keywords" content="student, resources, computer, engineering, learning">
+    <!-- 	Christina Buchwald
+      Date: Sept 17, 2018
+      WDV221 Home Page	-->
+    <style>
+      body{  background-color: rgba(255, 99, 71, 0.5)  }
+    </style>
+    <script>
+      // write a function that writes the length of a variable
+      var firstName = prompt("Please enter your first name");
+      var lastName = prompt("Please enter your last name");
+      // get the length of firstName
+      function getLength()
+      {
+        document.write(firstName.length);
+        return;
+      }
+      // get the length of the local string passed into it
+      function getLength2(inString)
+      {
+        document.write(inString.length);
+        return;
+      }
+      // get the length of the global string passed into it
+      function getLength3(inString)
+      {
+        return inString.length;
+      }
+      // concatenate the first and last name
+      function formatName(inFirstName, inLastName)
+      {
+        var result = inLastName + ", " + inFirstName;
+        document.write(result);
+        return result;
+      }
+    </script>
+  </head>
+  <body id="mainBody">
+    <h1>Welcome, <script>document.write(firstName);</script>!</h1>
+    <p>There are <script>getLength();</script> letters in your first name.</p>
+    <p>Here's another example: <script>getLength2(firstName);</script></p>
+    <p>And yet another... <script>document.write(getLength3(firstName));</script></p>
+    <br>
+    <p>Your full name is: <script>formatName(firstName, lastName);</script></p>
+    <br>
+    <button onclick="alert('button clicked');">
+      display text
+    </button>
+    <br>
+    <img src="../images/function.png" alt="Programming Function" style="width:200px;height:200px">
+  </body>
+</html>
