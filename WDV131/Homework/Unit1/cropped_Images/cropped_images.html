@@ -1,29 +1,83 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Image Crop Assignment</title>
-<!-- Christina Buchwald
-	   Jan 14, 2019
-     -->
-</head>
-<body>
-<!--To place your images on this web page copy and paste (or accuturately type) the name of the name of the image file where indicated. The alt name is for browser compliacne.-->
-<h3>The following images were cropped and optimized in Adobe Photoshop for viewing on a web page.</h3>
-
-
-<p><img src = "images/pastel_fiber.jpg" alt="Pastel Fiber"/></p>
-
-<p><img src = "images/peacock_wool.jpg" alt = "Peacock Colored Wool"/></p>
-
-<p><img src = "images/peacock_yarn.jpg" alt = "Peacock Colored Yarn"/></p>
-
-<p><img src = "images/rainbow_fiber.jpg" alt = "Rainbow Fiber"/></p>
-
-<p><img src = "images/rainbow_yarn.jpg" alt = "Rainbow Yarn"/></p>
-
-<p><img src = "images/rainbow_yarn_ball.jpg" alt = "Rainbow Yarn Ball"/></p>
-
-
-</body>
+  <head>
+  <meta charset="UTF-8">
+  <title>Image Crop Assignment</title>
+  <!-- Christina Buchwald
+  	   Jan 14, 2019
+       -->
+       <style>
+       * {
+           box-sizing: border-box;
+       }
+       body {
+           background-color: teal;
+           margin: 0;
+           font-family: Arial;
+       }
+       .flex-container  {
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+       .header {
+         text-align: center;
+         padding: 32px;
+       }
+       /* Create three equal columns next to each other */
+       .column {
+         flex:25%;
+         float: left;
+         width: 50%;
+         padding: 10px;
+       }
+       .column img {
+         width:100%;
+         vertical-align: middle;
+         margin-top: 8px;
+       }
+       .row  {
+           display;flex;
+           flex-wrap:wrap;
+         }
+       .row:after {
+           content: "";
+           display: table;
+           clear: both;
+         }
+       @media only screen and (max-width: 800px) {
+           .column {
+               flex: 50%;
+               max-width: 50%;
+           }
+       }
+       @media only screen and (max-width: 400px) {
+           .column {
+               flex: 100%;
+               max-width: 100%;
+           }
+       }
+     </style>
+  </head>
+  <body>
+    <div class="header">
+        <h3>The following images were cropped and optimized in Adobe Photoshop for viewing on a web page.</h3>
+    </div>
+    <div class="row">
+      <div class="flex-container">
+        <div class="column">
+          <p><img src = "images/pastel_fiber.jpg" alt="Pastel Fiber"/></p>
+          <p><img src = "images/peacock_wool.jpg" alt = "Peacock Colored Wool"/></p>
+        </div>
+        <div class="column">
+          <p><img src = "images/peacock_yarn.jpg" alt = "Peacock Colored Yarn"/></p>
+          <p><img src = "images/rainbow_fiber.jpg" alt = "Rainbow Fiber"/></p>
+        </div>
+        <div class="column">
+          <p><img src = "images/rainbow_yarn.jpg" alt = "Rainbow Yarn"/></p>
+          <p><img src = "images/rainbow_yarn_ball.jpg" alt = "Rainbow Yarn Ball"/></p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
