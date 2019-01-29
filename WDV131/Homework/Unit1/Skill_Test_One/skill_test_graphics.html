@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Skill Test Graphics</title>
+  <!-- Christina Buchwald
+  	   Jan 28, 2019
+       -->
+     <style>
+     * {
+         box-sizing: border-box;
+     }
+     body {
+         margin: 0;
+         font-family: Arial;
+     }
+     .flex-container  {
+          display:flex;
+          flex-wrap: wrap;
+          justify-content: center;
+     	}
+     .header {
+       text-align: center;
+       padding: 32px;
+     }
+     /* Create three equal columns next to each other */
+     .column {
+       flex:25%;
+       float: left;
+       width: 50%;
+       padding: 10px;
+     }
+     .column img {
+       width:100%;
+       vertical-align: middle;
+       margin-top: 8px;
+     }
+     .row  {
+         display;flex;
+         flex-wrap:wrap;
+       }
+     .row:after {
+         content: "";
+         display: table;
+         clear: both;
+       }
+     @media only screen and (max-width: 800px) {
+         .column {
+             flex: 50%;
+             max-width: 50%;
+         }
+     }
+     @media only screen and (max-width: 400px) {
+         .column {
+             flex: 100%;
+             max-width: 100%;
+         }
+     }
+   </style>
+  </head>
+  <body>
+    <div class="header">
+      <h3>The following graphics were optimized in Adobe Photoshop for viewing on a web page.</h3>
+    </div>
+    <div class="row">
+      <div class="flex-container">
+        <div class="column">
+          <img src = "graphics/4473103_illustration.png" alt="Polar Bear Illustration"/>
+          <img src = "graphics/burger.png" alt="Burger"/>
+        </div>
+        <div class="column">
+          <img src = "graphics/facebook-icon.png" alt="Facebook Icon"/>
+          <img src = "graphics/hiking_icon.png" alt="Hiking Icon"/>
+        </div>
+        <div class="column">
+          <img src = "graphics/mountains_logo.png" alt="Mountains Logo"/>
+          <img src = "graphics/polar-bear.png" alt="Polar Bear"/>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

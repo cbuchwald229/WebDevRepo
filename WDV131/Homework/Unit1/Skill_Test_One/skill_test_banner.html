@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Skill Test Banners</title>
+  <!-- Christina Buchwald
+  	   Jan 28, 2019
+       -->
+       <style>
+       * {
+           box-sizing: border-box;
+       }
+       body {
+           background-color: teal;
+           margin: 0;
+           font-family: Arial;
+       }
+       .flex-container  {
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+       .header {
+         text-align: center;
+         padding: 32px;
+       }
+       /* Create three equal columns next to each other */
+       .column {
+         flex:100%;
+         float: left;
+         width: 100%;
+         padding: 10px;
+       }
+       .column img {
+         width:100%;
+         vertical-align: middle;
+         margin-top: 8px;
+       }
+       .row  {
+           display;flex;
+           flex-wrap:wrap;
+         }
+       .row:after {
+           content: "";
+           display: table;
+           clear: both;
+         }
+     </style>
+  </head>
+  <body>
+    <div class="header">
+        <h3>The following banners were cropped and optimized in Adobe Photoshop for viewing on a web page.</h3>
+    </div>
+    <div class="row">
+      <div class="flex-container">
+        <div class="column">
+          <p><img src = "banners/Alaska.jpg" alt="Alaska"/></p>
+          <p><img src = "banners/Appelachean.jpg" alt="Appelachean"/></p>
+          <p><img src = "banners/canyon_replacement.jpg" alt="Canyon"/></p>
+          <p><img src = "banners/Colorado_Denver.jpg" alt="Denver, Colorado"/></p>
+          <p><img src = "banners/Colorado_Springs.jpg" alt="Colorado Springs"/></p>
+          <p><img src = "banners/custer_replacement.jpg" alt="Custer"/></p>
+          <p><img src = "banners/Everest.jpg" alt="Everest"/></p>
+          <p><img src = "banners/grand_canyon_replacement.jpg" alt="Grand Canyon"/></p>
+          <p><img src = "banners/Smokey_Mountains.jpg" alt="Smokey Mountains"/></p>
+          <p><img src = "banners/Swiss_Alps.jpg" alt="Swiss Alps"/></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
