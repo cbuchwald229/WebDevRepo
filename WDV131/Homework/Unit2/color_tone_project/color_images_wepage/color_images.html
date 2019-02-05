@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Image Color Repair Assignment</title>
+  <!-- Christina Buchwald
+  	   Feb 4, 2019
+       -->
+       <style>
+       * {
+           box-sizing: border-box;
+       }
+       body {
+           background-color: #663300;
+           margin: 0;
+           font-family: Arial;
+       }
+       .flex-container  {
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+       .header {
+         text-align: center;
+         padding: 32px;
+       }
+       /* Create three equal columns next to each other */
+       .column {
+         flex:25%;
+         float: left;
+         width: 50%;
+         padding: 10px;
+       }
+       .column img {
+         width:100%;
+         vertical-align: middle;
+         margin-top: 8px;
+       }
+       .row  {
+           display;flex;
+           flex-wrap:wrap;
+         }
+       .row:after {
+           content: "";
+           display: table;
+           clear: both;
+         }
+       @media only screen and (max-width: 800px) {
+           .column {
+               flex: 50%;
+               max-width: 50%;
+           }
+       }
+       @media only screen and (max-width: 400px) {
+           .column {
+               flex: 100%;
+               max-width: 100%;
+           }
+       }
+     </style>
+  </head>
+  <body>
+    <div class="header">
+        <h3>The following images were colorized and optimized in Adobe Photoshop for viewing on a web page.</h3>
+    </div>
+    <div class="row">
+      <div class="flex-container">
+        <div class="column">
+          <p><img src = "images/autumn_road_500.jpg" alt="Sepia Autumn Road"/></p>
+          <p><img src = "images/beach_500.jpg" alt = "Beach and Boats"/></p>
+          <p><img src = "images/oranges_500.jpg" alt = "Oranges, Lime, and Lemon"/></p>
+        </div>
+        <div class="column">
+          <p><img src = "images/cabin_snow_500.jpg" alt = "Cabin in the Snow"/></p>
+          <p><img src = "images/pumkins_500.jpg" alt = "Boy In Pumpkins"/></p>
+          <p><img src = "images/fly_fishing_500.jpg" alt = "Fly Fishing"/></p>
+        </div>
+        <div class="column">
+          <p><img src = "images/football_500.jpg" alt = "Night Football"/></p>
+          <p><img src = "images/model_clock_500.jpg" alt = "Model with a Clock"/></p>
+          <p><img src = "images/woman_1800s_500.jpg" alt = "Woman from the 1800s"/></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
