@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Special Effects Assignment</title>
+  <!-- Christina Buchwald
+  	   Feb 64, 2019
+       -->
+       <style>
+       * {
+           box-sizing: border-box;
+       }
+       body {
+           background-color: black;
+           color: white;
+           margin: 0;
+           font-family: Arial;
+       }
+       .flex-container  {
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+       .header {
+         text-align: center;
+         padding: 32px;
+       }
+       /* Create three equal columns next to each other */
+       .column {
+         flex:25%;
+         float: left;
+         width: 50%;
+         padding: 10px;
+       }
+       .column img {
+         width:100%;
+         vertical-align: middle;
+         margin-top: 8px;
+       }
+       .row  {
+           display;flex;
+           flex-wrap:wrap;
+         }
+       .row:after {
+           content: "";
+           display: table;
+           clear: both;
+         }
+       @media only screen and (max-width: 800px) {
+           .column {
+               flex: 50%;
+               max-width: 50%;
+           }
+       }
+       @media only screen and (max-width: 400px) {
+           .column {
+               flex: 100%;
+               max-width: 100%;
+           }
+       }
+     </style>
+  </head>
+  <body>
+    <div class="header">
+        <h3>The following images were specialized in Adobe Photoshop for viewing on a web page.</h3>
+    </div>
+    <div class="row">
+      <div class="flex-container">
+        <div class="column">
+          <p><img src = "images/peacock_special.jpg" alt = "Special Effects Peacock Feathers"/></p>
+          <p><img src = "images/bubbles_special.jpg" alt = "Special Effects Bubbles"/></p>
+          <p><img src = "images/cherries_special.jpg" alt = "Special Effects Cherries"/></p>
+          <p><img src = "images/rose_special.jpg" alt = "Special Effects Rose"/></p>
+        </div>
+        <div class="column">
+          <p><img src = "images/fruit_special.jpg" alt = "Special Effects Fruit Bowls"/></p>
+          <p><img src = "images/gator_special.jpg" alt = "Special Effects Gator"/></p>
+          <p><img src = "images/girlwithicecream_special.jpg" alt = "Special Effects Girl With Ice Cream"/></p>
+        </div>
+        <div class="column">
+          <p><img src = "images/goldendoodle_puppy_special.jpg" alt = "Special Effects Goldendoodle Puppy"/></p>
+          <p><img src = "images/balloons_special.jpg" alt="Special Effects Balloons"/></p>
+          <p><img src = "images/sea_turtle_special.jpg" alt = "Special Effects Sea Turtle"/></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
