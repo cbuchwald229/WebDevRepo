@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Vignettes Web Page 1</title>
+    <!-- Christina Buchwald
+    	   Feb 18, 2019
+         -->
+         <style>
+           * {
+               box-sizing: border-box;
+           }
+           body {
+               background-color: #CC7033;
+               color: black;
+               margin: 0;
+               font-family: Arial;
+           }
+           .flex-container  {
+                display:flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+           .header {
+             text-align: center;
+             padding: 32px;
+           }
+           /* Create three equal columns next to each other */
+           .column {
+             flex:25%;
+             float: left;
+             width: 50%;
+             padding: 10px;
+           }
+           .column img {
+             width:100%;
+             vertical-align: middle;
+             margin-top: 8px;
+           }
+           .row  {
+               display;flex;
+               flex-wrap:wrap;
+             }
+           .row:after {
+               content: "";
+               display: table;
+               clear: both;
+             }
+           @media only screen and (max-width: 800px) {
+               .column {
+                   flex: 50%;
+                   max-width: 50%;
+               }
+           }
+           @media only screen and (max-width: 400px) {
+               .column {
+                   flex: 100%;
+                   max-width: 100%;
+               }
+           }
+         </style>
+  </head>
+  <body>
+    <!--To place your vignette images on this web page copy and paste (or accuturately type) the name of the name of the image file where indicated. The alt name is for browser compliance.-->
+    <div class="header">
+        <h3>The following images are vignettes.</h3>
+    </div>
+    <div class="row">
+      <div class="flex-container">
+        <div class="column">
+          <p><img src = "images/beagle.jpg" alt="Begging Beagle"/></p>
+        </div>
+        <div class="column">
+          <p><img src = "images/moo_cow.jpg" alt = "Brown and White Cow"/></p>
+        </div>
+        <div class="column">
+          <p><img src = "images/lazy_dog.jpg" alt = "Sleeping Golden Retriever on a Log"/></p>
+          <p><img src = "images/weiner_dogs.jpg" alt = "Weiner Dogs"/></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

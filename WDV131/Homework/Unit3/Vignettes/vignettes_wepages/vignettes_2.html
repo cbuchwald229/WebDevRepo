@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Vignettes Web Page 2</title>
+    <!-- Christina Buchwald
+    	   Feb 18, 2019
+         -->
+         <style>
+           * {
+               box-sizing: border-box;
+           }
+           body {
+               background-color: #59A2C8;
+               color: black;
+               margin: 0;
+               font-family: Arial;
+           }
+           .flex-container  {
+                display:flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+           .header {
+             text-align: center;
+             padding: 32px;
+           }
+           /* Create three equal columns next to each other */
+           .column {
+             flex:25%;
+             float: left;
+             width: 50%;
+             padding: 10px;
+           }
+           .column img {
+             width:100%;
+             vertical-align: middle;
+             margin-top: 8px;
+           }
+           .row  {
+               display;flex;
+               flex-wrap:wrap;
+             }
+           .row:after {
+               content: "";
+               display: table;
+               clear: both;
+             }
+           @media only screen and (max-width: 800px) {
+               .column {
+                   flex: 50%;
+                   max-width: 50%;
+               }
+           }
+           @media only screen and (max-width: 400px) {
+               .column {
+                   flex: 100%;
+                   max-width: 100%;
+               }
+           }
+         </style>
+  </head>
+  <body>
+    <!--To place your vignette images on this web page copy and paste (or accuturately type) the name of the name of the image file where indicated. The alt name is for browser compliance.-->
+    <div class="header">
+        <h3>The following images are vignettes.</h3>
+    </div>
+    <div class="row">
+      <div class="flex-container">
+        <div class="column">
+          <p><img src = "images/graduate.jpg" alt="Graduate with Finger Up"/></p>
+        </div>
+        <div class="column">
+          <p><img src = "images/model.jpg" alt = "Model Making Kissy Face"/></p>
+        </div>
+        <div class="column">
+          <p><img src = "images/baseball_player.jpg" alt = "Baseball Player Throwing Ball"/></p>
+          <p><img src = "images/women.jpg" alt = "Women Talking"/></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
