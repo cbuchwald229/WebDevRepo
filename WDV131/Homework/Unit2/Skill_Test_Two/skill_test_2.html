@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Skill Test 2</title>
+  <!-- Christina Buchwald
+  	   Feb 64, 2019
+       -->
+       <style>
+       * {
+           box-sizing: border-box;
+       }
+       body {
+           background-color: #6495ED;
+           color: #00008B;
+           margin: 0;
+           font-family: Arial;
+       }
+       .flex-container  {
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+       .header {
+         text-align: center;
+         padding: 32px;
+       }
+       /* Create three equal columns next to each other */
+       .column {
+         flex:25%;
+         float: left;
+         width: 50%;
+         padding: 10px;
+       }
+       .column img {
+         width:100%;
+         vertical-align: middle;
+         margin-top: 8px;
+       }
+       .row  {
+           display;flex;
+           flex-wrap:wrap;
+         }
+       .row:after {
+           content: "";
+           display: table;
+           clear: both;
+         }
+       @media only screen and (max-width: 800px) {
+           .column {
+               flex: 50%;
+               max-width: 50%;
+           }
+       }
+       @media only screen and (max-width: 400px) {
+           .column {
+               flex: 100%;
+               max-width: 100%;
+           }
+       }
+     </style>
+  </head>
+  <body>
+    <div class="header">
+        <h3>The following images were specialized in Adobe Photoshop for viewing on a web page.</h3>
+    </div>
+    <div class="row">
+      <div class="flex-container">
+        <div class="column">
+          <p><img src = "repaired_images/Boy2.jpg" alt = "Little Boy on a Playgroud"/></p>
+          <p><img src = "repaired_images/china.jpg" alt = "China"/></p>
+          <p><img src = "repaired_images/couple.jpg" alt = "Married Couple"/></p>
+        </div>
+        <div class="column">
+          <p><img src = "repaired_images/family.jpg" alt = "Family Looking Over a Bridge"/></p>
+          <p><img src = "repaired_images/Jack.jpg" alt = "Old Jack"/></p>
+        </div>
+        <div class="column">
+          <p><img src = "repaired_images/landscape.jpg" alt = "Trees in a Landscape"/></p>
+          <p><img src = "repaired_images/rose.jpg" alt="Beautiful Rose"/></p>
+          <p><img src = "repaired_images/winter.jpg" alt = "Blue Winter"/></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
