@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Replaced Backgrounds</title>
+  <!-- Christina Buchwald
+  	   Feb 25, 2019
+       -->
+       <style>
+       * {
+           box-sizing: border-box;
+       }
+       body {
+           background-color: red;
+           color: black;
+           margin: 0;
+           font-family: Arial;
+       }
+       .flex-container  {
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+       .header {
+         text-align: center;
+         padding: 32px;
+       }
+       /* Create three equal columns next to each other */
+       .column {
+         flex:25%;
+         float: left;
+         width: 50%;
+         padding: 10px;
+       }
+       .column img {
+         width:100%;
+         vertical-align: middle;
+         margin-top: 8px;
+       }
+       .row  {
+           display;flex;
+           flex-wrap:wrap;
+         }
+       .row:after {
+           content: "";
+           display: table;
+           clear: both;
+         }
+       @media only screen and (max-width: 800px) {
+           .column {
+               flex: 50%;
+               max-width: 50%;
+           }
+       }
+       @media only screen and (max-width: 400px) {
+           .column {
+               flex: 100%;
+               max-width: 100%;
+           }
+       }
+     </style>
+  </head>
+  <body>
+    <div class="header">
+        <h3>The following images were specialized in Adobe Photoshop for viewing on a web page.</h3>
+    </div>
+    <div class="row">
+      <div class="flex-container">
+        <div class="column">
+          <p><img src = "images/bag_combo.jpg" alt = "Bag and Background"/></p>
+          <p><img src = "images/computer_combo.jpg" alt = "Computer and Zoom"/></p>
+          <p><img src = "images/parthenon_combo.jpg" alt = "Parthenon"/></p>
+        </div>
+        <div class="column">
+          <p><img src = "images/pepper_combo.jpg" alt = "Pepper and Background"/></p>
+          <p><img src = "images/pool_combo.jpg" alt = "Pool Water Replacement"/></p>
+        </div>
+        <div class="column">
+          <p><img src = "images/snack_combo.jpg" alt = "Onion Rings and Chips"/></p>
+          <p><img src = "images/urban_combo.jpg" alt = "Urban Buildings"/></p>
+          <p><img src = "images/woman_combo.jpg" alt = "Woman and Sunset"/></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

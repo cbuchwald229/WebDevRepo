@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Butterflies Webpage</title>
+  <!-- Christina Buchwald
+  	   Feb 64, 2019
+       -->
+       <style>
+       * {
+           box-sizing: border-box;
+       }
+       body {
+           background-color: #cc7033;
+           color: black;
+           margin: 0;
+           font-family: Arial;
+       }
+       .flex-container  {
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+       .header {
+         text-align: center;
+         padding: 32px;
+       }
+       /* Create three equal columns next to each other */
+       .column {
+         flex:25%;
+         float: left;
+         width: 50%;
+         padding: 10px;
+       }
+       .column img {
+         width:100%;
+         vertical-align: middle;
+         margin-top: 8px;
+       }
+       .row  {
+           display;flex;
+           flex-wrap:wrap;
+         }
+       .row:after {
+           content: "";
+           display: table;
+           clear: both;
+         }
+       @media only screen and (max-width: 800px) {
+           .column {
+               flex: 50%;
+               max-width: 50%;
+           }
+       }
+       @media only screen and (max-width: 400px) {
+           .column {
+               flex: 100%;
+               max-width: 100%;
+           }
+       }
+     </style>
+  </head>
+  <body>
+    <div class="header">
+        <h3>The following images were specialized in Adobe Photoshop for viewing on a web page.</h3>
+    </div>
+    <div class="row">
+      <div class="flex-container">
+        <div class="column">
+          <p><img src = "images/bigsky.jpg" alt = "Man Taking a Photo in Nature"/></p>
+          <p><img src = "images/butterflies.png" alt = "Butterflies"/></p>
+        </div>
+        <div class="column">
+          <p><img src = "images/Cop.jpg" alt = "Colorized Cop"/></p>
+          <p><img src = "images/Lips.jpg" alt = "Close up of Red Lips"/></p>
+          <p><img src = "images/sand_river1.jpg" alt = "Colored Leaves Grayscale Background"/></p>
+        </div>
+        <div class="column">
+          <p><img src = "images/umbrella-by-pool.jpg" alt = "Woman and Umbrella by the Pool"/></p>
+          <p><img src = "images/Warehouse.jpg" alt = "Warehouse"/></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
