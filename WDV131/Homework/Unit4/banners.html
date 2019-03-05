@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Banners for Web</title>
+    <!-- Christina Buchwald
+    	 March 4, 2019 -->
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        background-color: teal;
+        margin: 0;
+        font-family: Arial;
+    }
+    .flex-container  {
+         display:flex;
+         flex-wrap: wrap;
+         justify-content: center;
+     }
+    .header {
+      text-align: center;
+      padding: 32px;
+    }
+    /* Create three equal columns next to each other */
+    .column {
+      flex:100%;
+      float: left;
+      width: 100%;
+      padding: 10px;
+    }
+    .column img {
+      width:100%;
+      vertical-align: middle;
+      margin-top: 8px;
+    }
+    .row  {
+        display;flex;
+        flex-wrap:wrap;
+      }
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+  </style>
+  </head>
+  <body>
+    <div class="header">
+        <h3>The following are banners that combine and blend images.</h3>
+    </div>
+    <div class="row">
+      <div class="flex-container">
+        <div class="column">
+          <p><img src = "collage_images/Apda_banner.jpg" alt="American Parkinson Disease Association"/></p>
+          <p><img src = "collage_images/arl_collage.jpg" alt="Animal Rescue League Collage"/></p>
+          <p><img src = "collage_images/basketball_banner.jpg" alt="Basketball Image Collage Banner"/></p>
+          <p><img src = "collage_images/christina_banner.jpg" alt="Christina Buchwald Banner"/></p>
+          <p><img src = "collage_images/market_banner.jpg" alt="At The Market Banner"/></p>
+          <p><img src = "collage_images/photoshop_banner.jpg" alt="Photoshop Class Banner"/></p>
+          <p><img src = "collage_images/collage_collage.jpg" alt="Collage Collage"/></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
