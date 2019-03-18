@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Banners for Web</title>
+    <!-- Christina Buchwald
+    	 March 14, 2019 -->
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        background-color: teal;
+        margin: 0;
+        font-family: Arial;
+    }
+    .flex-container  {
+         display:flex;
+         flex-wrap: wrap;
+         justify-content: center;
+     }
+    .header {
+      text-align: center;
+      padding: 32px;
+    }
+    /* Create three equal columns next to each other */
+    .column {
+      flex:100%;
+      float: left;
+      width: 100%;
+      padding: 10px;
+    }
+    .column img {
+      width:100%;
+      vertical-align: middle;
+      margin-top: 8px;
+    }
+    .row  {
+        display;flex;
+        flex-wrap:wrap;
+      }
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+  </style>
+  </head>
+  <body>
+    <div class="header">
+        <h3>The following are banners that combine images and type font.</h3>
+    </div>
+    <div class="row">
+      <div class="flex-container">
+        <div class="column">
+          <p><img src = "BannersAndType/arl_collage.jpg" alt="ARL Collage with Type Font"/></p>
+          <p><img src = "BannersAndType/basketball_banner.jpg" alt="Basketball Banner with Type Font"/></p>
+          <p><img src = "BannersAndType/market_banner.jpg" alt="Market Banner with Type Font"/></p>
+      </div>
+    </div>
+  </body>
+</html>

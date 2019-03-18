@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>3D Type for Web</title>
+    <!-- Christina Buchwald
+    	 March 17, 2019 -->
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        background-color: white;
+        margin: 0;
+        font-family: Arial;
+    }
+    .flex-container  {
+         display:flex;
+         flex-wrap: wrap;
+         justify-content: center;
+     }
+    .header {
+      text-align: center;
+      padding: 32px;
+    }
+    /* Create three equal columns next to each other */
+    .column {
+      flex:50%;
+      float: left;
+      width: 50%;
+      padding: 10px;
+    }
+    .column img {
+      width:100%;
+      vertical-align: middle;
+      margin-top: 8px;
+    }
+    .row  {
+        display;flex;
+        flex-wrap:wrap;
+      }
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      @media only screen and (max-width: 400px) {
+          .column {
+              flex: 100%;
+              max-width: 100%;
+          }
+      }
+  </style>
+  </head>
+  <body>
+    <div class="header">
+        <h3>The following are 3D words that use photoshop.</h3>
+    </div>
+    <div class="row">
+      <div class="flex-container">
+        <div class="column">
+          <p><img src = "3dfirstAttempt.jpg" alt="3D Ballon Font"/></p>
+        </div>
+        <div class="column">
+          <p><img src = "CAT.jpg" alt="3D Cat Font"/></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Fun with Type</title>
+    <!-- Christina Buchwald
+    	 March 15, 2019 -->
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        background-color: #8B008B;
+        color: #F5F5F5;
+        margin: 0;
+        font-family: Arial;
+    }
+    .flex-container  {
+         display:flex;
+         flex-wrap: wrap;
+         justify-content: center;
+     }
+    .header {
+      text-align: center;
+      padding: 32px;
+    }
+    /* Create three equal columns next to each other */
+    .column {
+      flex:25%;
+      float: left;
+      width: 50%;
+      padding: 10px;
+    }
+    .column img {
+      width:100%;
+      vertical-align: middle;
+      margin-top: 8px;
+    }
+    .row  {
+        display;flex;
+        flex-wrap:wrap;
+      }
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      @media only screen and (max-width: 800px) {
+          .column {
+              flex: 50%;
+              max-width: 50%;
+          }
+      }
+      @media only screen and (max-width: 400px) {
+          .column {
+              flex: 100%;
+              max-width: 100%;
+          }
+      }
+  </style>
+  </head>
+  <body>
+    <div class="header">
+        <h3>The following are banners that combine and blend images.</h3>
+    </div>
+    <div class="row">
+      <div class="flex-container">
+        <div class="column">
+          <p><img src = "images/bubbles.jpg" alt="Bubbles Word Fun"/></p>
+          <p><img src = "images/fiber.jpg" alt="Fiber Word Fun"/></p>
+        </div>
+        <div class="column">
+          <p><img src = "images/peacock.jpg" alt="Peacock Word Fun"/></p>
+          <p><img src = "images/rainbow.jpg" alt="Rainbow Word Fun"/></p>
+        </div>
+        <div class="column">
+          <p><img src = "images/seaTurtle.jpg" alt="Sea Turtle Word Fun"/></p>
+          <p><img src = "images/trees.jpg" alt="Trees Word Fun"/></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
