@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Symbols SVG </title>
+    <!-- Christina Buchwald
+    	   March 25, 2019
+         -->
+         <style>
+          h3  {text-align: center;}
+          * {
+              box-sizing: border-box;
+          }
+          body {
+              background-color: white;
+              color: black;
+              margin: 0;
+              font-family: Arial;
+          }
+          .flex-container  {
+               display:flex;
+               flex-wrap: wrap;
+               justify-content: center;
+           }
+          .header {
+            text-align: center;
+          }
+          /* Create three equal columns next to each other */
+          .column {
+            flex:50%;
+            float: left;
+            width: 50%;
+            padding: 10px;
+          }
+          .column img {
+            width:100%;
+            vertical-align: middle;
+            margin-top: 8px;
+          }
+          .row  {
+              display;flex;
+              flex-wrap:wrap;
+            }
+          .row:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+          @media only screen and (max-width: 800px) {
+              .column {
+                  flex: 50%;
+                  max-width: 50%;
+              }
+          }
+          @media only screen and (max-width: 400px) {
+              .column {
+                  flex: 100%;
+                  max-width: 100%;
+        }
+    }
+         </style>
+  </head>
+  <body>
+    <div id="container">
+    <!--To place your word image files on this web page copy and paste (or accuturately type) the name of the name of the image file where indicated. The alt name is for browser compliance.-->
+    <h3 class="header">My Symbols</h3>
+    <p class="header">The following graphic symbols were created as Vector Shapes in Photoshop and then exported as SVG (Scalable Vector Graphics).</p>
+      <div class="row">
+        <div class="flex-container">
+          <div class="column">
+            <p><img src = "images/floralMedallion.svg" alt="symbol" width="250" height="250"/></p>
+            <p><img src = "images/floralSymbol.svg" alt="symbol" width="250" height="250"/></p>
+            <p><img src = "images/pinkFloral.svg" alt="symbol" width="250" height="250"/></p>
+            <p><img src = "images/simpleSymbol.svg" alt="symbol" width="250" height="250"/></p>
+          </div>
+          <div class="column">
+            <p><img src = "images/starburstSymbol.svg" alt="symbol" width="250" height="250"/></p>
+            <p><img src = "images/starSymbol.svg" alt="symbol" width="250" height="250"/></p>
+            <p><img src = "images/zenFloral.svg" alt="symbol" width="250" height="250"/></p>
+            <p><img src = "images/pinkPurpleStar.svg" alt="symbol" width="250" height="250"/></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
